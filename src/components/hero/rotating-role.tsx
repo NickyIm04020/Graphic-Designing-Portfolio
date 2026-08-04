@@ -18,7 +18,7 @@ export function RotatingRole({ className }: { className?: string }) {
   }, []);
 
   return (
-    <motion.span layout className={className} style={{ display: "inline-flex" }}>
+    <motion.span layout className={className} style={{ display: "block", maxWidth: "100%" }}>
       <AnimatePresence mode="popLayout">
         <motion.span
           key={roles[index]}
@@ -27,7 +27,7 @@ export function RotatingRole({ className }: { className?: string }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -14 }}
           transition={{ duration: 0.5, ease: EASE }}
-          className="whitespace-nowrap bg-gradient-to-r from-neon-red to-electric-blue bg-clip-text text-transparent"
+          className="block max-w-full bg-gradient-to-r from-neon-red to-electric-blue bg-clip-text text-transparent"
         >
           {roles[index]}
         </motion.span>

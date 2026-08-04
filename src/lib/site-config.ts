@@ -24,7 +24,7 @@ export const roles: string[] = [
   "Canva Expert",
   "Visual Designer",
   "Social Media Designer",
-  "Marketing Creative Designer",
+  "Marketing Designer",
   "Website Developer",
 ];
 

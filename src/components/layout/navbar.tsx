@@ -38,21 +38,21 @@ export function Navbar() {
           : "border-white/[0.03] bg-transparent"
       )}
     >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:h-[4.75rem] xl:h-28 xl:max-w-[min(94vw,2700px)] xl:px-12 2xl:h-32 2xl:px-20">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:h-[4.75rem] xl:h-24 xl:max-w-[min(94vw,2700px)] xl:px-8 2xl:h-28 2xl:px-14">
         <a
           href="#home"
-          className="font-heading text-xl font-bold tracking-tight text-white lg:text-2xl xl:text-3xl 2xl:text-[2rem]"
+          className="font-heading text-xl font-bold tracking-tight text-white lg:text-2xl xl:text-2xl 2xl:text-3xl"
         >
           {siteConfig.shortName}
           <span className="text-neon-red">.</span>
         </a>
 
-        <ul className="hidden items-center gap-8 xl:flex xl:gap-12 2xl:gap-14">
+        <ul className="hidden items-center gap-8 xl:flex xl:gap-6 2xl:gap-9">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-mono text-[13px] uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-white lg:text-sm xl:text-base 2xl:text-lg"
+                className="font-mono text-[13px] uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-white lg:text-sm xl:text-[13px] 2xl:text-sm"
               >
                 {link.label}
               </a>
@@ -65,7 +65,7 @@ export function Navbar() {
             render={<a href="#contact" />}
             nativeButton={false}
             size="sm"
-            className="rounded-full px-5 text-sm shadow-[0_0_16px_rgba(230,36,41,0.3)] lg:h-11 lg:px-6 lg:text-base xl:h-14 xl:px-8 xl:text-lg 2xl:h-16 2xl:px-9 2xl:text-xl"
+            className="rounded-full px-5 text-sm shadow-[0_0_16px_rgba(230,36,41,0.3)] lg:h-11 lg:px-6 lg:text-base xl:h-12 xl:px-6 xl:text-base 2xl:h-14 2xl:px-8 2xl:text-lg"
           >
             Get in Touch
           </Button>
