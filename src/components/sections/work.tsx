@@ -43,14 +43,14 @@ export function Work() {
     >
       <div className="pointer-events-none absolute -top-20 right-0 h-[26rem] w-[26rem] rounded-full bg-neon-red/[0.07] blur-[150px]" />
 
-      <div className="relative mx-auto max-w-[min(94vw,2700px)]">
+      <div className="relative mx-auto max-w-[min(94vw,168.75rem)]">
         <SectionHeader
           index="05"
           label="Featured Work"
           heading="The pieces that get sent first."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:mt-16 lg:grid-cols-4 lg:auto-rows-[280px] lg:gap-6 xl:auto-rows-[320px] xl:gap-7 2xl:auto-rows-[360px] 2xl:gap-8">
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:mt-16 lg:grid-cols-4 lg:auto-rows-[17.5rem] lg:gap-6 xl:auto-rows-[20rem] xl:gap-7 2xl:auto-rows-[22.5rem] 2xl:gap-8">
           {featuredProjects.map((project, i) => {
             const layout = BENTO_LAYOUT[project.slug] ?? {
               size: "square" as const,

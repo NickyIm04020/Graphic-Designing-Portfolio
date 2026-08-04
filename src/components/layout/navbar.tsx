@@ -38,7 +38,7 @@ export function Navbar() {
           : "border-white/[0.03] bg-transparent"
       )}
     >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:h-[4.75rem] xl:h-24 xl:max-w-[min(94vw,2700px)] xl:px-8 2xl:h-28 2xl:px-14">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:h-[4.75rem] xl:h-24 xl:max-w-[min(94vw,168.75rem)] xl:px-8 2xl:h-28 2xl:px-14">
         <a
           href="#home"
           className="font-heading text-xl font-bold tracking-tight text-white lg:text-2xl xl:text-2xl 2xl:text-3xl"
@@ -52,7 +52,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-mono text-[13px] uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-white lg:text-sm xl:text-[13px] 2xl:text-sm"
+                className="font-mono text-[0.8125rem] uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-white lg:text-sm xl:text-[0.8125rem] 2xl:text-sm"
               >
                 {link.label}
               </a>

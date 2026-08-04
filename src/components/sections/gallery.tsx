@@ -37,7 +37,7 @@ export function Gallery() {
     >
       <div className="pointer-events-none absolute top-0 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-electric-blue/[0.06] blur-[160px]" />
 
-      <div className="relative mx-auto max-w-[min(94vw,2700px)]">
+      <div className="relative mx-auto max-w-[min(94vw,168.75rem)]">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             index="06"

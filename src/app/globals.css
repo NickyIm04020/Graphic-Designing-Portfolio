@@ -115,6 +115,23 @@
   }
 }
 
+/* Desktop/laptop-only root scale. Nearly every Tailwind utility used across
+   the site (type scale, spacing, gaps, radii, button/card sizing) is
+   rem-based, i.e. relative to this root font-size — adjusting it scales the
+   whole design system proportionally from one place, instead of hand-tuning
+   each component's size individually. Mobile and tablet (below 1024px)
+   keep the 16px default untouched. */
+@media (min-width: 1024px) {
+  html {
+    font-size: 8px; /* laptop: ~50% of the 16px default */
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 8px; /* desktop: ~50% of the 16px default */
+  }
+}
+
 @layer utilities {
   .font-heading {
     font-family: var(--font-heading);

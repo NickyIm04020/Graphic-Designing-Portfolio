@@ -61,7 +61,7 @@ export function BentoProjectCard({
           {project.categories.map((c) => (
             <span
               key={c}
-              className="rounded-full border border-white/15 bg-background/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-white/85 backdrop-blur-sm xl:px-3 xl:py-1.5 xl:text-xs"
+              className="rounded-full border border-white/15 bg-background/80 px-2.5 py-1 font-mono text-[0.625rem] uppercase tracking-[0.15em] text-white/85 backdrop-blur-sm xl:px-3 xl:py-1.5 xl:text-xs"
             >
               {c}
             </span>
@@ -93,14 +93,14 @@ export function BentoProjectCard({
             smoothly without measuring anything in JS. */}
         <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]">
           <div className="min-h-0 overflow-hidden">
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-white/70 lg:text-[15px] xl:max-w-lg xl:text-base">
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-white/70 lg:text-[0.9375rem] xl:max-w-lg xl:text-base">
               {project.description}
             </p>
             <div className="mt-3 flex flex-wrap gap-1.5 xl:gap-2">
               {project.tools.map((tool) => (
                 <span
                   key={tool}
-                  className="rounded-full border border-white/15 bg-white/[0.04] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-white/70 xl:px-3 xl:py-1.5 xl:text-xs"
+                  className="rounded-full border border-white/15 bg-white/[0.04] px-2.5 py-1 font-mono text-[0.625rem] uppercase tracking-wide text-white/70 xl:px-3 xl:py-1.5 xl:text-xs"
                 >
                   {tool}
                 </span>

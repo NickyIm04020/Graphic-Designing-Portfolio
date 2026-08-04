@@ -58,7 +58,7 @@ export function Contact() {
         ))}
       </svg>
 
-      <div className="relative mx-auto flex max-w-[min(94vw,2700px)] flex-col items-center text-center">
+      <div className="relative mx-auto flex max-w-[min(94vw,168.75rem)] flex-col items-center text-center">
         <SectionHeader index="08" label="Contact" heading="Let's build something worth sending twice." align="center" />
 
         <motion.p

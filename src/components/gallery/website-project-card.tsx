@@ -70,7 +70,7 @@ export function WebsiteProjectCard({
             </div>
           )}
           <div className="relative flex flex-1 items-center justify-center bg-[radial-gradient(circle_at_30%_20%,rgba(230,36,41,0.14),transparent_55%),radial-gradient(circle_at_75%_80%,rgba(37,99,235,0.14),transparent_55%)]">
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
+            <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-white/30">
               Preview Coming Soon
             </span>
           </div>
@@ -98,7 +98,7 @@ export function WebsiteProjectCard({
 
       {/* Caption */}
       <div className="flex flex-1 flex-col p-6 lg:p-7">
-        <span className="w-fit rounded-full border border-white/15 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-white/70">
+        <span className="w-fit rounded-full border border-white/15 bg-white/[0.03] px-2.5 py-1 font-mono text-[0.625rem] uppercase tracking-[0.15em] text-white/70">
           Websites
         </span>
         <h3 className="mt-3 font-heading text-xl font-bold text-white lg:text-2xl">
@@ -113,13 +113,13 @@ export function WebsiteProjectCard({
             project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-white/70"
+                className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[0.625rem] uppercase tracking-wide text-white/70"
               >
                 {tech}
               </span>
             ))
           ) : (
-            <span className="rounded-full border border-dashed border-white/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
+            <span className="rounded-full border border-dashed border-white/15 px-2.5 py-1 font-mono text-[0.625rem] uppercase tracking-wide text-muted-foreground">
               Tech stack coming soon
             </span>
           )}

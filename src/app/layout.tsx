@@ -24,10 +24,12 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yaswanthippili.vercel.app";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://yaswanth-ippili-graphic-designing-portfolio.vercel.app";
 const title = `${siteConfig.name} — Graphic & Creative Designer`;
 const description =
-  "Portfolio of Yaswanth Kumar Ippili — graphic design, presentation design, brand identity, and website design for startups, professors, creators, and student teams.";
+  "Portfolio of Yaswanth Kumar Ippili — graphic design, presentation design, website design, logo & brand identity, social media creatives, and Canva design for recruiters and freelance clients.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -40,8 +42,10 @@ export const metadata: Metadata = {
     "Yaswanth Kumar Ippili",
     "Graphic Designer",
     "Presentation Designer",
-    "Brand Identity Designer",
     "Website Designer",
+    "Logo Designer",
+    "Brand Identity Designer",
+    "Social Media Design",
     "Canva Expert",
     "Freelance Designer India",
     "IIIT Bhubaneswar",

@@ -1,38 +1,42 @@
 # Yaswanth Kumar Ippili — Portfolio
 
-A dark, motion-driven portfolio for a graphic, presentation, and brand
-identity designer — built to read equally well to recruiters skimming for a
-role and freelance clients sizing up a hire. Real case studies, a filterable
-project gallery, and a fullscreen viewer replace the usual static image grid.
-
 **Live site:** https://yaswanth-ippili-graphic-designing-portfolio.vercel.app/
 
----
+## Overview
+
+A dark, motion-driven portfolio built for a designer working across graphic
+design, presentation design, website design, and brand identity — positioned
+for both recruiters evaluating a hire and freelance clients evaluating a
+collaborator. Real case studies replace stock imagery: a filterable project
+gallery, a fullscreen deck viewer, and a dedicated service breakdown stand in
+for a generic "about me" page.
+
+Single-page Next.js App Router site, no CMS, no backend — all content lives
+in typed data files under `src/lib/`.
 
 ## Features
 
-- **Cinematic hero** with a full-bleed portrait, a rotating title (Creative
-  Designer, Presentation Designer, Website Developer, …), and a mouse-reactive
-  animated backdrop
+- **Full-bleed hero** with a rotating title (Creative Designer, Presentation
+  Designer, Website Developer, Canva Expert, …), a mouse-reactive animated
+  backdrop, and a portrait that shares the row with the headline rather than
+  floating separately from it
 - **Fluid, desktop-first typography** — headline and section sizes scale
-  continuously with the viewport (via CSS `clamp()` and container queries)
+  continuously with the viewport via CSS `clamp()` and container queries
   instead of jumping between a handful of fixed breakpoints
-- **Filterable project gallery** across Presentations, Posters, Flyers,
-  Logos, Branding, Social Media, and Websites, with animated filter
-  transitions
+- **Services section** framed around freelance-ready offerings: graphic
+  design, presentation design, website design, brand identity, social media
+  creatives, and Canva work — not a single job title
+- **Filterable project gallery** — Presentations, Posters, Flyers, Logos,
+  Branding, Social Media, and Websites — with animated filter transitions
 - **Fullscreen project viewer** — swipe, arrow-key, and click-to-zoom
   navigation through multi-page presentation decks
 - **Website showcase cards** with a Desktop / Tablet / Mobile preview
-  toggle, Live Demo / GitHub actions, and a tech-stack list — ready to swap
-  in real projects
-- **Services & Skills sections** framed around freelance-ready offerings
-  (graphic design, presentation design, brand identity, website design,
-  Canva) rather than a single job title
-- Scroll-triggered reveal animations throughout via Framer Motion, smooth
-  scrolling via Lenis
+  toggle and Live Demo / GitHub actions, ready to swap in real projects
+- Scroll-triggered reveal animations via Framer Motion, smooth scrolling via
+  Lenis
 - Dark-mode-only design system — no light theme, by design
-- SEO metadata, Open Graph/Twitter share images, and a favicon generated at
-  build time (no static image assets to keep in sync)
+- SEO metadata, and Open Graph/Twitter share images and a favicon generated
+  at build time (no static image assets to keep in sync)
 
 ## Tech Stack
 
@@ -76,7 +80,7 @@ public/
   profile-photo.jpg            # Hero/About portrait
 ```
 
-Everything under `components/sections` is composed, in order, in
+Every section in `src/components/sections/` is composed, in order, in
 `src/app/page.tsx` — reordering the page is a one-file change.
 
 ## Installation
@@ -89,14 +93,14 @@ cd <repo-folder>
 npm install
 ```
 
-## Running Locally
+## Local Development
 
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000). Turbopack hot-reloads
-on save.
+on save. Run `npm run lint` before committing.
 
 ## Production Build
 
@@ -105,29 +109,27 @@ npm run build   # compiles and type-checks the production bundle
 npm run start   # serves that build locally, exactly as Vercel would
 ```
 
-Run `npm run lint` before either to catch issues early.
-
-## Deployment
+## Deployment (Vercel)
 
 1. Push this repository to GitHub.
-2. Go to [vercel.com/new](https://vercel.com/new) and import the repo —
-   the Next.js preset is auto-detected, no build settings to change.
-3. *(Optional)* Set `NEXT_PUBLIC_SITE_URL` to your final production URL so
-   Open Graph/Twitter share previews resolve to the right domain. Without
-   it, metadata falls back to a default URL.
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repo — the
+   Next.js preset is auto-detected, no build settings to change.
+3. *(Optional)* Set `NEXT_PUBLIC_SITE_URL` to your production URL so Open
+   Graph/Twitter share previews resolve to the right domain. Without it,
+   metadata falls back to the live URL above.
 4. Deploy. Every push to the default branch redeploys automatically.
 
 This is a single-page app with no dynamic routes, so refreshing any in-page
 anchor (e.g. `/#work`) just reloads `/` and the browser scrolls to that
-section — no extra Vercel routing configuration is required.
+section — no extra routing configuration is required.
 
 ## Customization
 
-All content lives in plain data files under `src/lib/` — no need to touch
-component code to update copy or add work.
+All content lives in plain data files under `src/lib/` — no component code
+to touch for a content update.
 
-**New case-study projects (Presentations, Posters, Flyers, Logos, Branding,
-Social Media)** — add an entry to the `projects` array in
+**New case-study projects** (Presentations, Posters, Flyers, Logos,
+Branding, Social Media) — add an entry to the `projects` array in
 `src/lib/projects.ts`:
 
 ```ts
@@ -160,13 +162,12 @@ in `src/lib/website-projects.ts`:
 }
 ```
 
-**Posters, logos, certificates, or any other category** — these are all
-just `ProjectCategory` values (`src/lib/projects.ts`). Tag a project with
-the matching category and it appears under that Gallery filter
-automatically; add a new category to the `ProjectCategory` union and
-`allCategories` array to introduce a new filter.
+**New categories** (e.g. logos or certificates as their own filter) — add
+the value to the `ProjectCategory` union and `allCategories` array in
+`src/lib/projects.ts`; tag any project with it and the Gallery filter
+appears automatically.
 
-**Skills** — edit the `designTools` / `presentationTools` arrays in
+**Skills** — edit `designTools` / `presentationTools` in
 `src/components/sections/skills.tsx`.
 
 **Services** — edit the `services` array in
@@ -176,23 +177,15 @@ expandable item list per card).
 **Name, rotating titles, nav links, social links** — all in
 `src/lib/site-config.ts`.
 
+## License
+
+This repository is source-available for reference and personal learning.
+The code, design, content, and imagery are © Yaswanth Kumar Ippili and are
+not licensed for reuse or redistribution.
+
 ## Screenshots
 
 <!-- Add screenshots or a short walkthrough GIF here before publishing, e.g.:
 ![Hero section](./docs/screenshot-hero.png)
 ![Gallery section](./docs/screenshot-gallery.png)
 -->
-
-## Credits
-
-- Built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com),
-  [Framer Motion](https://motion.dev), [Base UI](https://base-ui.com), and
-  [Lucide](https://lucide.dev)
-- Smooth scrolling by [Lenis](https://lenis.darkroom.engineering)
-- Component scaffolding via [shadcn](https://ui.shadcn.com)
-
-## License
-
-This repository is source-available for reference and personal learning.
-The code is not licensed for reuse; the design, content, and imagery are
-© Yaswanth Kumar Ippili and not licensed for reuse.

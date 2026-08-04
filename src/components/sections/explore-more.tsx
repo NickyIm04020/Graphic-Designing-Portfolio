@@ -14,7 +14,7 @@ export function ExploreMore() {
       id="explore-more"
       className="relative w-full overflow-hidden px-6 py-20 lg:px-10 lg:py-24 xl:px-16 2xl:px-20"
     >
-      <div className="relative mx-auto max-w-[min(94vw,2700px)]">
+      <div className="relative mx-auto max-w-[min(94vw,168.75rem)]">
         <SectionHeader
           index="07"
           label="Explore More"

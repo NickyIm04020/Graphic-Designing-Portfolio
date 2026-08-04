@@ -6,7 +6,7 @@ import { navLinks, siteConfig } from "@/lib/site-config";
 export function Footer() {
   return (
     <footer className="relative border-t border-white/[0.06] px-6 py-10 lg:px-10 lg:py-14 xl:px-16 xl:py-16">
-      <div className="mx-auto flex max-w-[min(94vw,2700px)] flex-col items-center gap-6 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto flex max-w-[min(94vw,168.75rem)] flex-col items-center gap-6 lg:flex-row lg:items-center lg:justify-between">
         <motion.a
           href="#home"
           initial={{ opacity: 0 }}

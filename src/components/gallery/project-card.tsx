@@ -97,7 +97,7 @@ export function ProjectCard({
             {project.categories.map((c) => (
               <span
                 key={c}
-                className="rounded-full border border-white/15 bg-background/50 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-white/80 backdrop-blur-sm"
+                className="rounded-full border border-white/15 bg-background/50 px-2.5 py-1 font-mono text-[0.625rem] uppercase tracking-[0.15em] text-white/80 backdrop-blur-sm"
               >
                 {c}
               </span>

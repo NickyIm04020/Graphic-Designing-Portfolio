@@ -155,7 +155,7 @@ export function Services() {
     >
       <div className="pointer-events-none absolute -top-20 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-neon-red/[0.06] blur-[160px]" />
 
-      <div className="relative mx-auto max-w-[min(94vw,2700px)]">
+      <div className="relative mx-auto max-w-[min(94vw,168.75rem)]">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             index="04"

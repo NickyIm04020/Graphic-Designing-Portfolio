@@ -75,7 +75,7 @@ function ViewerBody({ project, open }: { project: Project; open: boolean }) {
       {/* Header */}
       <div className="flex items-start justify-between gap-4 px-5 py-4 lg:px-10 lg:py-6 xl:px-14 xl:py-8">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-neon-red lg:text-xs xl:text-sm">
+          <p className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-neon-red lg:text-xs xl:text-sm">
             {project.categories.join(" · ")}
           </p>
           <h2 className="mt-1 font-heading text-xl font-bold text-white lg:text-2xl xl:text-3xl">
@@ -186,7 +186,7 @@ function ViewerBody({ project, open }: { project: Project; open: boolean }) {
             {project.tools.map((tool) => (
               <span
                 key={tool}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[10px] uppercase tracking-wide text-white/70 xl:px-3.5 xl:py-1.5 xl:text-xs"
+                className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[0.625rem] uppercase tracking-wide text-white/70 xl:px-3.5 xl:py-1.5 xl:text-xs"
               >
                 {tool}
               </span>

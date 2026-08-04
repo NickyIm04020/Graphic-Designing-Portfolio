@@ -51,7 +51,7 @@ export function Experience() {
     >
       <div className="pointer-events-none absolute top-1/3 -left-40 h-[28rem] w-[28rem] rounded-full bg-neon-red/10 blur-[140px]" />
 
-      <div className="relative mx-auto max-w-[min(94vw,2700px)]">
+      <div className="relative mx-auto max-w-[min(94vw,168.75rem)]">
         <SectionHeader
           index="02"
           label="Experience"

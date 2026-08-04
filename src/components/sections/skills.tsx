@@ -64,7 +64,7 @@ function ToolGroup({ title, tools, delay }: { title: string; tools: Tool[]; dela
             </div>
             <span
               className={cn(
-                "shrink-0 rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-wide xl:px-3.5 xl:py-1.5 xl:text-xs",
+                "shrink-0 rounded-full border px-3 py-1 font-mono text-[0.625rem] uppercase tracking-wide xl:px-3.5 xl:py-1.5 xl:text-xs",
                 tierStyles[tool.tier]
               )}
             >
@@ -83,7 +83,7 @@ export function Skills() {
       id="skills"
       className="relative w-full overflow-hidden px-6 py-24 lg:px-10 lg:py-32 xl:px-16 2xl:px-20"
     >
-      <div className="relative mx-auto max-w-[min(94vw,2700px)]">
+      <div className="relative mx-auto max-w-[min(94vw,168.75rem)]">
         <SectionHeader
           index="03"
           label="Skills"

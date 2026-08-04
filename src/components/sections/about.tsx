@@ -59,14 +59,14 @@ export function About({ hasPhoto }: { hasPhoto: boolean }) {
       {/* faint corner glow to tie into the hero's neon-void language */}
       <div className="pointer-events-none absolute -top-40 right-0 h-[32rem] w-[32rem] rounded-full bg-electric-blue/10 blur-[140px]" />
 
-      <div className="relative mx-auto max-w-[min(94vw,2700px)]">
+      <div className="relative mx-auto max-w-[min(94vw,168.75rem)]">
         <SectionHeader
           index="01"
           label="About"
           heading="Design with an engineer's discipline."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-[420px_1fr] lg:gap-16 xl:grid-cols-[500px_1fr] xl:gap-24 2xl:grid-cols-[580px_1fr] 2xl:gap-28">
+        <div className="mt-14 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-[26.25rem_1fr] lg:gap-16 xl:grid-cols-[31.25rem_1fr] xl:gap-24 2xl:grid-cols-[36.25rem_1fr] 2xl:gap-28">
           {/* Photo + credentials column */}
           <div className="flex flex-col gap-6">
             <motion.div
@@ -100,7 +100,7 @@ export function About({ hasPhoto }: { hasPhoto: boolean }) {
               )}
               {!hasPhoto && (
                 <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-background/60 px-5 py-3 backdrop-blur-sm">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className="font-mono text-[0.6875rem] uppercase tracking-[0.2em] text-muted-foreground">
                     Photo coming soon
                   </p>
                 </div>

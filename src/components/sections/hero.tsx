@@ -26,13 +26,13 @@ export function Hero({ hasPhoto }: { hasPhoto: boolean }) {
           (not -center) plus a flex-1 text column means text and photo
           jointly fill the full row — only the gap between them is
           breathing room, not the outer margins. */}
-      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center gap-16 lg:max-w-5xl xl:max-w-[min(94vw,2700px)] xl:flex-row xl:items-center xl:justify-between xl:gap-10 xl:px-6 2xl:gap-14 2xl:px-12">
+      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center gap-16 lg:max-w-5xl xl:max-w-[min(94vw,168.75rem)] xl:flex-row xl:items-center xl:justify-between xl:gap-10 xl:px-6 2xl:gap-14 2xl:px-12">
         {/* Text column — one identity block (name + rotating role, fused
             together rather than competing as separate badge-style shapes),
             one line of positioning, one clear action, and a quiet trailing
             credential line. Fewer, bolder beats instead of six stacked
             elements. */}
-        <div className="@container flex w-full flex-col items-center text-center xl:flex-1 xl:items-start xl:text-left xl:max-w-[1200px] 2xl:max-w-[1600px]">
+        <div className="@container flex w-full flex-col items-center text-center xl:flex-1 xl:items-start xl:text-left xl:max-w-[75rem] 2xl:max-w-[100rem]">
           <motion.span
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ export function Hero({ hasPhoto }: { hasPhoto: boolean }) {
             for it to breathe next to the text instead of cramping it. Sits
             close enough to the text column (tightened gap above) that the
             two read as one row, not a separate floating block. */}
-        <div className="relative hidden shrink-0 xl:block xl:w-[520px] 2xl:w-[min(36vw,760px)]">
+        <div className="relative hidden shrink-0 xl:block xl:w-[32.5rem] 2xl:w-[min(36vw,47.5rem)]">
           <HeroVisual hasPhoto={hasPhoto} />
         </div>
       </div>
@@ -140,7 +140,7 @@ export function Hero({ hasPhoto }: { hasPhoto: boolean }) {
         transition={{ duration: 0.8, delay: 0.9 }}
         className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-white"
       >
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
+        <span className="font-mono text-[0.625rem] uppercase tracking-[0.3em]">
           Scroll
         </span>
         <motion.span
