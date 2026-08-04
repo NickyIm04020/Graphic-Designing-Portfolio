@@ -22,14 +22,17 @@ export function Hero({ hasPhoto }: { hasPhoto: boolean }) {
       <HeroBackdrop />
 
       {/* Same max-width convention as every other section, so the hero's
-          content edges line up with the rest of the page. */}
-      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center gap-16 lg:max-w-5xl xl:max-w-[min(94vw,2700px)] xl:flex-row xl:items-center xl:justify-center xl:gap-16 xl:px-6 2xl:gap-24 2xl:px-12">
+          content edges line up with the rest of the page. justify-between
+          (not -center) plus a flex-1 text column means text and photo
+          jointly fill the full row — only the gap between them is
+          breathing room, not the outer margins. */}
+      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center gap-16 lg:max-w-5xl xl:max-w-[min(94vw,2700px)] xl:flex-row xl:items-center xl:justify-between xl:gap-10 xl:px-6 2xl:gap-14 2xl:px-12">
         {/* Text column — one identity block (name + rotating role, fused
             together rather than competing as separate badge-style shapes),
             one line of positioning, one clear action, and a quiet trailing
             credential line. Fewer, bolder beats instead of six stacked
             elements. */}
-        <div className="@container flex w-full flex-col items-center text-center xl:max-w-[900px] xl:items-start xl:text-left 2xl:max-w-[min(50vw,1240px)]">
+        <div className="@container flex w-full flex-col items-center text-center xl:flex-1 xl:items-start xl:text-left xl:max-w-[1200px] 2xl:max-w-[1600px]">
           <motion.span
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +77,7 @@ export function Hero({ hasPhoto }: { hasPhoto: boolean }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.32, ease: EASE }}
-            className="mt-8 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground lg:mt-10 lg:text-xl xl:max-w-2xl xl:text-[1.6rem] xl:leading-snug 2xl:max-w-3xl 2xl:text-[1.8rem]"
+            className="mt-8 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground lg:mt-10 lg:text-xl xl:max-w-none xl:text-[1.6rem] xl:leading-snug 2xl:text-[1.8rem]"
           >
             I turn ideas into visuals worth sending twice &mdash; posters,
             decks, brand systems, and websites &mdash; built with an
@@ -122,12 +125,10 @@ export function Hero({ hasPhoto }: { hasPhoto: boolean }) {
         </div>
 
         {/* Focal visual — only at true desktop widths, where there's room
-            for it to breathe next to the text instead of cramping it. A
-            floating status chip overlaps the seam so the photo and the
-            text column read as one bonded composition, not two floating
-            blocks. */}
-        <div className="relative hidden shrink-0 xl:block xl:w-[460px] 2xl:w-[min(32vw,660px)]">
-          <div className="pointer-events-none absolute inset-y-[12%] -left-8 w-px bg-gradient-to-b from-transparent via-white/15 to-transparent 2xl:-left-10" />
+            for it to breathe next to the text instead of cramping it. Sits
+            close enough to the text column (tightened gap above) that the
+            two read as one row, not a separate floating block. */}
+        <div className="relative hidden shrink-0 xl:block xl:w-[520px] 2xl:w-[min(36vw,760px)]">
           <HeroVisual hasPhoto={hasPhoto} />
         </div>
       </div>
