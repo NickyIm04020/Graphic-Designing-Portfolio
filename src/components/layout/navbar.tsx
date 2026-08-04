@@ -47,7 +47,7 @@ export function Navbar() {
           <span className="text-neon-red">.</span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex lg:gap-10 xl:gap-12 2xl:gap-14">
+        <ul className="hidden items-center gap-8 xl:flex xl:gap-12 2xl:gap-14">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -60,7 +60,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden xl:block">
           <Button
             render={<a href="#contact" />}
             nativeButton={false}
@@ -75,7 +75,7 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="xl:hidden"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >

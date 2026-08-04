@@ -27,10 +27,10 @@ export function Hero({ hasPhoto }: { hasPhoto: boolean }) {
     >
       <HeroBackdrop />
 
-      {/* Fluid, single-rule container width — grows continuously with the
-          viewport (instead of jumping between fixed caps) so it scales
-          correctly from a 13" laptop up through a 34" ultrawide. */}
-      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center gap-16 lg:max-w-5xl xl:max-w-[min(95vw,2900px)] xl:flex-row xl:items-center xl:justify-center xl:gap-16 xl:px-6 2xl:gap-24 2xl:px-12">
+      {/* Same max-width convention as every other section (max-w-[min(94vw,2700px)])
+          so the hero's content edges line up with the rest of the page at
+          wide viewports instead of drifting to a different width. */}
+      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center gap-16 lg:max-w-5xl xl:max-w-[min(94vw,2700px)] xl:flex-row xl:items-center xl:justify-center xl:gap-16 xl:px-6 2xl:gap-24 2xl:px-12">
         {/* Text column — capped (not flex-grow) so it stays visually bonded
             to the photo instead of stretching into dead space on ultrawide;
             sized off its own container width (cqw) so the headline scales

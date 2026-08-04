@@ -4,9 +4,11 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ProjectCard } from "@/components/gallery/project-card";
+import { WebsiteProjectCard } from "@/components/gallery/website-project-card";
 import { ComingSoonCard } from "@/components/gallery/coming-soon-card";
 import { ProjectViewer } from "@/components/gallery/project-viewer";
 import { allCategories, projects, type Project } from "@/lib/projects";
+import { websiteProjects } from "@/lib/website-projects";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -24,7 +26,9 @@ export function Gallery() {
     return projects.filter((p) => p.categories.includes(filter));
   }, [filter]);
 
-  const showComingSoon = filter !== "All" && filtered.length === 0;
+  const showWebsites = filter === "All" || filter === "Websites";
+  const showComingSoon =
+    filter !== "All" && filter !== "Websites" && filtered.length === 0;
 
   return (
     <section
@@ -76,6 +80,11 @@ export function Gallery() {
                   onOpen={() => setActiveProject(project)}
                 />
               ))}
+
+              {showWebsites &&
+                websiteProjects.map((project, i) => (
+                  <WebsiteProjectCard key={project.slug} project={project} index={i} />
+                ))}
 
               {showComingSoon &&
                 Array.from({ length: emptyCategoryPlaceholders }).map((_, i) => (

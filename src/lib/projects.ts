@@ -4,7 +4,8 @@ export type ProjectCategory =
   | "Flyers"
   | "Logos"
   | "Branding"
-  | "Social Media";
+  | "Social Media"
+  | "Websites";
 
 export type ProjectImage = {
   src: string;
@@ -198,6 +199,7 @@ export const projects: Project[] = [
 ];
 
 export const allCategories: ProjectCategory[] = [
+  "Websites",
   "Logos",
   "Posters",
   "Presentations",

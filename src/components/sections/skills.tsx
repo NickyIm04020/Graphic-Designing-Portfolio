@@ -99,6 +99,7 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.16, ease: EASE }}
+            className="flex flex-col rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 xl:p-7"
           >
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground lg:text-sm xl:text-base">
               How I Work
