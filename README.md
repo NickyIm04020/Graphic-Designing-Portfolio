@@ -4,7 +4,7 @@ A dark, motion-driven portfolio site for a graphic, presentation, and brand
 identity designer — built to showcase real work to recruiters and freelance
 clients alike.
 
-**Live site:** _add your Vercel URL here after deploying_
+**Live site:** https://yaswanth-ippili-graphic-designing-portfolio.vercel.app/
 
 ## Overview
 
