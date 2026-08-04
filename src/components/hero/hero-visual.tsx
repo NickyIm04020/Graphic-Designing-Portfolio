@@ -124,15 +124,6 @@ export function HeroVisual({ hasPhoto }: { hasPhoto: boolean }) {
               }}
             />
           )}
-
-          <div className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-background/50 px-6 py-4 backdrop-blur-sm lg:px-7 lg:py-5">
-            <p className="font-mono text-sm uppercase tracking-[0.2em] text-white/80 lg:text-base">
-              {siteConfig.role}
-            </p>
-            <p className="mt-0.5 font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground lg:text-sm">
-              {siteConfig.location}
-            </p>
-          </div>
         </motion.div>
       </div>
     </motion.div>
